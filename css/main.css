@@ -6,6 +6,9 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
+a {
+  text-decoration: none;
+}
 .container {
   max-width: 1280px;
   padding-left: 20px;
@@ -48,6 +51,23 @@
 .menyu-item:hover {
   color: #00c4f0;
 
+}
+.language {
+  border: #dfd6d6 1px solid;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-left: 30px;
+}
+.lang-items {
+  border-left: 1px solid #dfd6d6;
+  text-decoration: none;
+  color: #fff;
+  padding-left: 12px;
+}
+.lang-item {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 12px;
 }
 /* hero  */
 .hero {
@@ -136,6 +156,7 @@
   padding: 8px 12px;
   border-radius: 12px;
   cursor: pointer;
+  text-decoration: none;
 }
 .hero-img {
   border-radius: 50%;
@@ -145,6 +166,9 @@
   color: #00c4f0;
   border: #00c4f0 1px solid;
   transition: all 0.5s ease;
+}
+.hero-link {
+  color: #fff;
 }
 /* hero  */
 /* About  */
@@ -293,6 +317,12 @@
 }
 .services-img {
   margin-bottom: 30px;
+}
+.sevices-link {
+  color: #000;
+}
+.sevices-link:hover {
+  color: #fff;
 }
 /* sevices  */
 /* work  */
