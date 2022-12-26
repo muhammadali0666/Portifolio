@@ -6,9 +6,17 @@ window.addEventListener("DOMContentLoaded", function (){
 
   const hamburger = document.querySelector(".hamburger")
   const menyu = document.querySelector(".menyu")
+  const menyuItems = document.querySelectorAll(".menyu a")
 
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active")
     menyu.classList.toggle("active")
+  })
+
+  menyuItems.forEach(navItem => {
+    navItem.addEventListener("click", () => {
+      hamburger.classList.add("active")
+      menyu.classList.add("active")
+    })
   })
 })
