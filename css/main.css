@@ -1506,7 +1506,7 @@ header.sticky {
 /* contact me  */
 /* footer  */
 .footer {
-  background-color: rgb(0, 0, 139);
+  background-color: rgb(0, 0, 139, 0.4)
 }
 .footer-inner {
   padding-top: 40px;
