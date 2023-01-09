@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function (){
   window.addEventListener("scroll", function () {
     const header = document.querySelector("header")
-    header.classList.toggle("sticky", window.scrollY > 650)
+    header.classList.toggle("sticky", window.scrollY > 150)
   })
 
   const hamburger = document.querySelector(".hamburger")
