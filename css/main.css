@@ -4,7 +4,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Mochiy Pop One', sans-serif;
   scroll-behavior: smooth;
 }
 a {
@@ -51,6 +52,7 @@ header.sticky {
   padding-bottom: 20px;
 }
 .header-logo {
+  font-family: 'Mochiy Pop One', sans-serif;
   color: #fff;
   text-decoration: none;
   font-size: 30px;
