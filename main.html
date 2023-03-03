@@ -132,9 +132,8 @@
                 I graduated from secondary school number 93 in 2020.
                 I am studying Backend in the Web-programming full stack course at the center of modern professions
               </p>
-              <button class="about-btn">
-                SEE MORE
-              </button>
+              <button onclick=downloadFile() class="about-btn"> <a style="color: black;" download="hello.txt" href='#'
+                  id="link">download</a></button>
             </div>
           </div>
 
@@ -365,5 +364,17 @@
 </body>
 <script src="./js/main.js"></script>
 <script src="./js/jquery.js"></script>
+<script>
+  let blob = new Blob([`I am Muhammadali Shuhratjonov Frontent Developer,I was born in 2002 in Urgut district of Samarkand
+                region.
+                I graduated from secondary school number 93 in 2020.
+                I am studying Backend in the Web-programming full stack course at the center of modern professions`], { type: 'text/plain' });
+  link.href = URL.createObjectURL(blob);
+  function downloadFile() {
+    fetch("http://127.0.0.1:5500/main.html")
+      .then(res => res.json())
+      .then(data => console.log(data))
+  }
+</script>
 
 </html>

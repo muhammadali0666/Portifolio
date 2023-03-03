@@ -125,16 +125,15 @@
             </div>
             <div class="about-box-right" data-aos="fade-up" data-aos-duration="1000">
               <h2 class="about-me">
-                Salom! Men Muhammadali Shuhratjonov
+                Assalomu aleykum! Men Muhammadali Shuhratjonov
               </h2>
               <p class="about-text">
                 Men Muhammadali Shuhratjonov Frontent Dasturchiman 2002-yili Samarqand viloyati Urgut tumanida
-                tug'ilganman. Ma'lumotim o'rta 2020-tili 93-sonli umum ta'lim maktabini tamomlaganman. Hozirda Najot
+                tug'ilganman. Ma'lumotim o'rta 2020-yili 93-sonli umum ta'lim maktabini tamomlaganman. Hozirda Najot
                 Ta'lim zamonaviy kasblar markazida Web-dasturlash full stack kursida Backend bo'yicha o'qiyman
               </p>
-              <button class="about-btn">
-                Ko'proq ko'rish
-              </button>
+              <button onclick=downloadFile() class="about-btn"> <a style="color: black;" download="hello.txt" href='#'
+                  id="link">yuklash</a></button>
             </div>
           </div>
 
@@ -349,6 +348,11 @@
                 <img class="footer-item-img" src="./img/github.png" alt="logo" width="25" height="25">
               </a>
             </li>
+            <li class="footer-item">
+              <a target="_blank" href="https://github.com/muhammadali0666" class="footer-item-link">
+                <img class="footer-item-img" src="./img/youtube.png" alt="logo" width="25" height="25">
+              </a>
+            </li>
           </ul>
           <p class="footer-text">
             Copyright @2022, All Rights Reserved
@@ -369,6 +373,18 @@
   </script>
   <script src="./js/main.js"></script>
   <script src="./js/jquery.js"></script>
+
+  <script>
+    let blob = new Blob([`Men Muhammadali Shuhratjonov Frontent Dasturchiman 2002-yili Samarqand viloyati Urgut tumanida
+                tug'ilganman. Ma'lumotim o'rta 2020-tili 93-sonli umum ta'lim maktabini tamomlaganman. Hozirda Najot
+                Ta'lim zamonaviy kasblar markazida Web-dasturlash full stack kursida Backend bo'yicha o'qiyman`], { type: 'text/plain' });
+    link.href = URL.createObjectURL(blob);
+    function downloadFile() {
+      fetch("http://127.0.0.1:5500/main.html")
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+  </script>
 </body>
 
 </html>
