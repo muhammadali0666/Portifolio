@@ -64,15 +64,15 @@
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-inner">
-          <div class="hero-box">
+          <div class="hero-box type-js type-js">
             <span class="her-span">
-              Hello I'm
             </span>
-            <h2 class="hero-paragraph">
+            <h2 class="hero-paragraph text-js">
+              Hello I'm
               Muhammadali Shuhratjonov
+              Frontend Developer
             </h2>
             <p class="hero-text">
-              Frontend Developer
             </p>
             <div class="hero-mini-box">
               <p class="hero-animate">
@@ -361,7 +361,6 @@
   <script>
     AOS.init();
   </script>
-</body>
 <script src="./js/main.js"></script>
 <script src="./js/jquery.js"></script>
 <script>
@@ -376,5 +375,65 @@
       .then(data => console.log(data))
   }
 </script>
+
+<!-- autoType -->
+<script>
+  function autoType(elementClass, typingSpeed){
+var thhis = $(elementClass);
+thhis.css({
+  "position": "relative",
+  "display": "inline-block"
+});
+thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+thhis = thhis.find(".text-js");
+var text = thhis.text().trim().split('');
+var amntOfChars = text.length;
+var newString = "";
+thhis.text("|");
+setTimeout(function(){
+  thhis.css("opacity",1);
+  thhis.prev().removeAttr("style");
+  thhis.text("");
+  for(var i = 0; i < amntOfChars; i++){
+    (function(i,char){
+      setTimeout(function() {        
+        newString += char;
+        thhis.text(newString);
+      },i*typingSpeed);
+    })(i+1,text[i]);
+  }
+},1500);
+}
+
+$(document).ready(function(){
+//   // Now to start autoTyping just call the autoType function with the 
+//   // class of outer div
+//   // The second paramter is the speed between each letter is typed.   
+autoType(".type-js", 100);
+
+
+});
+</script>
+
+<!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+window.__lc = window.__lc || {};
+window.__lc.license = 15272721;
+;(function(n,t,c)
+{function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}
+let e={_q:[],_h:null,_v:"2.0",on:
+function(){i(["on",c.call(arguments)])},once:
+function(){i(["once",c.call(arguments)])},off:
+function(){i(["off",c.call(arguments)])},get:
+function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");
+return i(["get",c.call(arguments)])},call:
+function(){i(["call",c.call(arguments)])},init:
+function(){let n=t.createElement("script");n.async=!0,n.type="text/javascript",
+n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};
+!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechat.com/chat-with/15272721/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+</body>
 
 </html>

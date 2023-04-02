@@ -8,6 +8,10 @@
   font-family: 'Mochiy Pop One', sans-serif;
   scroll-behavior: smooth;
 }
+body {
+  background-color: white;
+}
+
 a {
   text-decoration: none;
 }
@@ -274,6 +278,7 @@ header.sticky {
   align-items: center;
 }
 .hero-box {
+  max-width: 600px;
   padding-left: 40px;
 }
 .her-span {
@@ -281,8 +286,9 @@ header.sticky {
   font-size: 18px;
 }
 .hero-paragraph {
-  font-size: 40px;
+  font-size: 30px;
   color: #fff;
+  margin-bottom: 20px;
 }
 .hero-mini-box {
  height: 70px;
@@ -457,7 +463,7 @@ header.sticky {
     color: #fff;
   }
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 766px) {
   .hero {
     height: 100vh;
   }
@@ -475,7 +481,7 @@ header.sticky {
     font-size: 18px;
   }
   .hero-paragraph {
-    font-size: 32px;
+    font-size: 26px;
     color: #fff;
   }
   .hero-mini-box {

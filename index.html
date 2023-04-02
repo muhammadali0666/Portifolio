@@ -65,16 +65,17 @@
       <div class="container">
         <div class="hero-inner">
 
-          <div class="hero-box">
-            <span class="her-span">
+          <div class="hero-box type-js type-js">
+            <!-- <span class="her-span text-js">
               Assalomu Aleykum, men
-            </span>
-            <h2 class="hero-paragraph">
+            </span> -->
+            <h2 class="hero-paragraph text-js">
+              Assalomu Aleykum, men
               Muhammadali Shuhratjonov
-            </h2>
-            <p class="hero-text">
               Frontend Dasturchiman
-            </p>
+            </h2>
+            <!-- <p class="hero-text">
+            </p> -->
             <div class="hero-mini-box">
               <p class="hero-animate">
                 HTML
@@ -373,18 +374,76 @@
   </script>
   <script src="./js/main.js"></script>
   <script src="./js/jquery.js"></script>
-
   <script>
     let blob = new Blob([`Men Muhammadali Shuhratjonov Frontent Dasturchiman 2002-yili Samarqand viloyati Urgut tumanida
                 tug'ilganman. Ma'lumotim o'rta 2020-tili 93-sonli umum ta'lim maktabini tamomlaganman. Hozirda Najot
                 Ta'lim zamonaviy kasblar markazida Web-dasturlash full stack kursida Backend bo'yicha o'qiyman`], { type: 'text/plain' });
     link.href = URL.createObjectURL(blob);
     function downloadFile() {
-      fetch("http://127.0.0.1:5500/main.html")
+      fetch("http://127.0.0.1:5500/index.html")
         .then(res => res.json())
         .then(data => console.log(data))
     }
+
   </script>
+
+  <script>
+    function autoType(elementClass, typingSpeed){
+  var thhis = $(elementClass);
+  thhis.css({
+    "position": "relative",
+    "display": "inline-block"
+  });
+  thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+  thhis = thhis.find(".text-js");
+  var text = thhis.text().trim().split('');
+  var amntOfChars = text.length;
+  var newString = "";
+  thhis.text("|");
+  setTimeout(function(){
+    thhis.css("opacity",1);
+    thhis.prev().removeAttr("style");
+    thhis.text("");
+    for(var i = 0; i < amntOfChars; i++){
+      (function(i,char){
+        setTimeout(function() {        
+          newString += char;
+          thhis.text(newString);
+        },i*typingSpeed);
+      })(i+1,text[i]);
+    }
+  },1500);
+}
+
+$(document).ready(function(){
+//   // Now to start autoTyping just call the autoType function with the 
+//   // class of outer div
+//   // The second paramter is the speed between each letter is typed.   
+  autoType(".type-js", 100);
+
+  
+});
+  </script>
+
+  <!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+  window.__lc = window.__lc || {};
+  window.__lc.license = 15272721;
+  ;(function(n,t,c)
+  {function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}
+  let e={_q:[],_h:null,_v:"2.0",on:
+  function(){i(["on",c.call(arguments)])},once:
+  function(){i(["once",c.call(arguments)])},off:
+  function(){i(["off",c.call(arguments)])},get:
+  function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");
+  return i(["get",c.call(arguments)])},call:
+  function(){i(["call",c.call(arguments)])},init:
+  function(){let n=t.createElement("script");n.async=!0,n.type="text/javascript",
+  n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};
+  !n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechat.com/chat-with/15272721/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
 </body>
 
 </html>
